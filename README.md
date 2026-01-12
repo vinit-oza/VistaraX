@@ -1,5 +1,8 @@
 # VistaraX - PropTech Landing Page
 
+[![Build and Deploy](https://github.com/vinit-oza/VistaraX/actions/workflows/deploy.yml/badge.svg)](https://github.com/vinit-oza/VistaraX/actions/workflows/deploy.yml)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue)](https://vinit-oza.github.io/VistaraX/)
+
 A modern, responsive landing page for VistaraX, a revolutionary PropTech platform that helps real estate developers sell off-plan properties through immersive 3D experiences and real-time booking systems.
 
 ## 🚀 Features
@@ -42,15 +45,34 @@ A modern, responsive landing page for VistaraX, a revolutionary PropTech platfor
 2. Install dependencies: `npm install`
 3. Start development server: `npm run dev`
 4. Build for production: `npm run build`
-5. Deploy to GitHub Pages: `npm run deploy`
 
-## 📦 Deployment
+## 🚀 Deployment
 
-This project is configured for GitHub Pages deployment:
+This project uses **GitHub Actions** for automated deployment to GitHub Pages:
 
-- Build command: `npm run build`
-- Deploy command: `npm run deploy`
-- Live URL: https://vinit-oza.github.io/VistaraX/
+### Automated Deployment
+- **Trigger**: Automatic deployment on every push to `main` branch
+- **Process**: Lint → Build → Deploy
+- **Live URL**: https://vinit-oza.github.io/VistaraX/
+
+### Workflow Features
+- ✅ **Automated Testing**: Runs ESLint on every push and PR
+- ✅ **Build Verification**: Ensures the project builds successfully
+- ✅ **Conditional Deployment**: Only deploys from main branch
+- ✅ **Manual Trigger**: Can be triggered manually from GitHub Actions tab
+- ✅ **Pull Request Checks**: Validates PRs before merging
+
+### Development Workflow
+1. Make changes to your code
+2. Commit and push to main branch: `git add . && git commit -m "Your changes" && git push`
+3. GitHub Actions automatically builds and deploys your changes
+4. Your site is updated at https://vinit-oza.github.io/VistaraX/
+
+### Manual Commands
+- **Development**: `npm run dev`
+- **Build locally**: `npm run build`
+- **Lint code**: `npm run lint`
+- **Preview build**: `npm run preview`
 
 ## 👨‍💻 Developer
 
