@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import MagneticButton from './MagneticButton';
+import logoImg from '../assets/Logo.png';
 
 const Footer = () => {
   const links = {
@@ -141,7 +142,7 @@ const Footer = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src="/Logo.png" alt="VistaraX" className="h-35 w-auto filter brightness-0 invert" />
+              <img src={logoImg} alt="VistaraX" className="h-35 w-auto filter brightness-0 invert" />
             </motion.a>
             
             

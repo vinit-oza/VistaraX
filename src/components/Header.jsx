@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import MagneticButton from './MagneticButton';
+import logoImg from '../assets/Logo.png';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <img src="/Logo.png" alt="VistaraX" className="h-8 lg:h-25 w-auto" />
+            <img src={logoImg} alt="VistaraX" className="h-8 lg:h-25 w-auto" />
           </motion.a>
 
           <motion.div
