@@ -5,20 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/VistaraX",
+  base: process.env.NODE_ENV === 'production' ? '/VistaraX/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          animations: ['framer-motion', 'gsap'],
-          utils: ['lenis', '@studio-freight/lenis']
-        }
-      }
-    }
+    minify: false
   }
 })
