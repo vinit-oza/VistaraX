@@ -1,20 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import MagneticButton from './MagneticButton';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
   const { scrollY } = useScroll();
   const headerBg = useTransform(scrollY, [0, 100], ['rgba(255,255,255,0)', 'rgba(255,255,255,0.95)']);
   const headerBorder = useTransform(scrollY, [0, 100], ['rgba(0,0,0,0)', 'rgba(0,0,0,0.1)']);
-
-  useEffect(() => {
-    const unsubscribe = scrollY.on('change', (latest) => {
-      setHasScrolled(latest > 50);
-    });
-    return () => unsubscribe();
-  }, [scrollY]);
 
   const navLinks = [
     { label: 'Platform', href: '#solutions' },

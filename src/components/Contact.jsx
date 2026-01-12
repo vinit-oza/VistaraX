@@ -12,7 +12,6 @@ const Contact = () => {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
-  const [focusedField, setFocusedField] = useState(null);
   const formRef = useRef(null);
   const isInView = useInView(formRef, { once: true, margin: '-100px' });
 
@@ -204,8 +203,6 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('name')}
-                        onBlur={() => setFocusedField(null)}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                         placeholder="Ahmed Hassan"
@@ -227,8 +224,6 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('email')}
-                        onBlur={() => setFocusedField(null)}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                         placeholder="ahmed@company.com"
@@ -252,8 +247,6 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('company')}
-                        onBlur={() => setFocusedField(null)}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                         placeholder="Your company"
@@ -274,8 +267,6 @@ const Contact = () => {
                         name="units"
                         value={formData.units}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField('units')}
-                        onBlur={() => setFocusedField(null)}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all bg-gray-50 focus:bg-white"
                       >
@@ -302,8 +293,6 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      onFocus={() => setFocusedField('message')}
-                      onBlur={() => setFocusedField(null)}
                       rows={3}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent outline-none transition-all resize-none bg-gray-50 focus:bg-white"
                       placeholder="E.g., We're launching a 300-unit tower in Dubai Marina Q2 2026..."
